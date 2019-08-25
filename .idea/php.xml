@@ -2,7 +2,7 @@
 <project version="4">
   <component name="PhpIncludePathManager">
     <include_path>
-      <path value="$PROJECT_DIR$/../../wp/usp_files" />
+      <path value="$PROJECT_DIR$/../../wp/sites/unitedsprinklerco" />
     </include_path>
   </component>
 </project>
