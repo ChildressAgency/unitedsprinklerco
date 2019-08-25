@@ -45,3 +45,16 @@ header.navigation {
   }
 }
 
+.waves {
+  > div {
+    min-height: 60px;
+  }
+
+  .blue {
+    background-color: $blue;
+  }
+
+  .gray {
+    background-color: $gray;
+  }
+}
