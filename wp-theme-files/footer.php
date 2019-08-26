@@ -3,7 +3,7 @@
 </footer>
 
 <footer class="navigation py-4">
-  <div class="container py-4">
+  <div class="container pt-4">
     <div class="row">
 
       <div class="col-12 col-md-6">
@@ -44,6 +44,36 @@
         <?php endif ?>
       </div>
     </div>
+
+    <div class="row justify-content-center text-center pt-3">
+      <div class="col-12 social-icons">
+        <?php if (get_field("facebook", "option")) : ?>
+          <a href="<?php echo get_field("facebook", "option") ?>">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+        <?php endif ?>
+        <?php if (get_field("twitter", "option")) : ?>
+          <a href="<?php echo get_field("twitter", "option") ?>">
+            <i class="fab fa-twitter-square"></i>
+          </a>
+        <?php endif ?>
+        <?php if (get_field("linkedin", "option")) : ?>
+          <a href="<?php echo get_field("linkedin", "option") ?>">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        <?php endif ?>
+        <?php if (get_field("instagram", "option")) : ?>
+          <a href="<?php echo get_field("instagram", "option") ?>">
+            <i class="fab fa-instagram"></i>
+          </a>
+        <?php endif ?>
+      </div>
+
+      <div class="col-12 pt-3">
+        <small>Website designed by <a href="https://childressagency.com/">Childress Agency</a></small>
+      </div>
+    </div>
+
   </div>
 </footer>
 

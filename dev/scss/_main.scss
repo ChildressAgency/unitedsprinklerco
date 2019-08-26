@@ -41,6 +41,12 @@ header.navigation {
   #menu-navigation-menu {
     min-width: 376px;
   }
+
+  .social-icons {
+    a {
+      margin: 2px;
+    }
+  }
 }
 
 footer.top-footer {
@@ -57,6 +63,15 @@ footer.navigation {
 
   a {
     color: white;
+  }
+
+  .social-icons {
+    font-size: 24px;
+    color: $lightblue;
+
+    a {
+      margin: 4px;
+    }
   }
 }
 

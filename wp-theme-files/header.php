@@ -37,7 +37,7 @@
 
 <header class="navigation my-2">
   <div class="container">
-    <div class="row">
+    <div class="row align-items-center">
       <div class="col-9 col-md-6">
         <?php if (has_custom_logo()) the_custom_logo() ?>
       </div>
@@ -49,7 +49,30 @@
       </div>
 
       <div class="col-12 col-md-6">
-        <nav class="navbar navbar-expand-md navbar-light">
+        <div class="social-icons text-center text-md-right pr-md-4 pt-2">
+          <?php if (get_field("facebook", "option")) : ?>
+            <a href="<?php echo get_field("facebook", "option") ?>">
+              <i class="fab fa-facebook-square"></i>
+            </a>
+          <?php endif ?>
+          <?php if (get_field("twitter", "option")) : ?>
+            <a href="<?php echo get_field("twitter", "option") ?>">
+              <i class="fab fa-twitter-square"></i>
+            </a>
+          <?php endif ?>
+          <?php if (get_field("linkedin", "option")) : ?>
+            <a href="<?php echo get_field("linkedin", "option") ?>">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          <?php endif ?>
+          <?php if (get_field("instagram", "option")) : ?>
+            <a href="<?php echo get_field("instagram", "option") ?>">
+              <i class="fab fa-instagram"></i>
+            </a>
+          <?php endif ?>
+        </div>
+
+        <nav class="navbar navbar-expand-md navbar-light pt-1">
           <?php
           wp_nav_menu(array(
             'theme_location' => 'nav-menu',
