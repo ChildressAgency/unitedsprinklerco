@@ -28,6 +28,22 @@
       </div>
 
     </div>
+
+    <div class="row justify-content-center text-center pt-5">
+      <div class="col-12">
+        <?php if (get_field("address", "option")) : ?>
+          <div><?php echo get_field("address", "option") ?></div>
+        <?php endif ?>
+      </div>
+      <div class="col-12">
+        <?php if (get_field("phone", "option")) : ?>
+          <span>Local <?php echo get_field("phone", "option") ?></span>
+        <?php endif ?>
+        <?php if (get_field("fax", "option")) : ?>
+          &bullet; <span>Fax <?php echo get_field("fax", "option") ?></span>
+        <?php endif ?>
+      </div>
+    </div>
   </div>
 </footer>
 

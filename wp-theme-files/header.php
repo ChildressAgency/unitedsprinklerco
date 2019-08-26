@@ -11,29 +11,31 @@
 <body>
 
 <header class="contact">
-  <?php
-  $email = "info@unitedsprinklers.com"; //TODO: custom fields
-  $phone = "540.659.4675";
-  ?>
   <div class="container">
     <div class="row">
-      <div class="col-12 col-md-4 email">
-        <a href="mailto:<?php echo $email ?>"><?php echo $email ?></a>
-      </div>
+      <?php if (get_field("email", "option")): ?>
+        <div class="col-12 col-md-4 email">
+          <a href="mailto:<?php echo get_field("email", "option") ?>">
+            <?php echo get_field("email", "option") ?>
+          </a>
+        </div>
+      <?php endif ?>
 
       <div class="col-12 col-md-4 text-center">
         <a class="quote" href="#">Request a quote</a>
       </div>
 
-      <div class="col-12 col-md-4 phone text-right">
-        <span>24/7</span>
-        <?php echo $phone ?>
-      </div>
+      <?php if (get_field("phone", "option")): ?>
+        <div class="col-12 col-md-4 phone text-right">
+          <span>24/7</span>
+          <?php echo get_field("phone", "option") ?>
+        </div>
+      <?php endif ?>
     </div>
   </div>
 </header>
 
-<header class="navigation my-1">
+<header class="navigation my-2">
   <div class="container">
     <div class="row">
       <div class="col-9 col-md-6">
