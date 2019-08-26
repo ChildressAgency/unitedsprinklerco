@@ -124,5 +124,39 @@ add_filter('wp_get_attachment_image_attributes', function ($attr) {
   return $attr;
 });
 
+add_action('init', 'cai_create_post_types');
+function cai_create_post_types()
+{
+  register_post_type("testimonial", array(
+    "public" => true,
+    "menu_icon" => "dashicons-awards",
+    "labels" => array(
+      "name" => "Testimonials",
+      "singular" => "Testimonial",
+      'search_items' => 'Search Testimonials',
+      'all_items' => 'All Testimonials',
+      'edit_item' => 'Edit Testimonial',
+      'update_item' => 'Update Testimonial',
+      'add_new_item' => 'Add New Testimonial',
+      'menu_name' => 'Testimonials',
+    )
+  ));
+  register_post_type("service", array(
+    "public" => true,
+    "menu_icon" => "dashicons-hammer",
+    "labels" => array(
+      "name" => "Services",
+      "singular" => "Service",
+      'search_items' => 'Search Services',
+      'all_items' => 'All Services',
+      'edit_item' => 'Edit Service',
+      'update_item' => 'Update Service',
+      'add_new_item' => 'Add New Service',
+      'menu_name' => 'Services',
+    )
+  ));
+  flush_rewrite_rules();
+}
+
 require_once dirname(__FILE__) . '/includes/class-wp-bootstrap-navwalker.php';
 require_once dirname(__FILE__) . '/includes/custom-fields.php';
