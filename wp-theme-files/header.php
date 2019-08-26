@@ -33,7 +33,7 @@
   </div>
 </header>
 
-<header class="navigation">
+<header class="navigation my-1">
   <div class="container">
     <div class="row">
       <div class="col-9 col-md-6">

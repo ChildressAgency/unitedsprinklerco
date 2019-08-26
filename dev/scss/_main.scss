@@ -15,7 +15,7 @@ header.contact {
   line-height: 40px;
 
   .quote {
-    background-color: $blue;
+    background-color: $darkblue;
     display: inline-block;
     text-transform: uppercase;
     font-style: italic;
@@ -38,10 +38,25 @@ header.contact {
 }
 
 header.navigation {
-  margin: 10px auto;
-
   #menu-navigation-menu {
     min-width: 376px;
+  }
+}
+
+footer.top-footer {
+  background-color: $blue;
+  color: $lightblue;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+footer.navigation {
+  background-color: $darkblue;
+  color: white;
+
+  a {
+    color: white;
   }
 }
 
@@ -51,7 +66,7 @@ header.navigation {
   }
 
   .blue {
-    background-color: $blue;
+    background-color: $darkblue;
   }
 
   .gray {
