@@ -110,3 +110,30 @@ footer.navigation {
     }
   }
 }
+
+.stripe.red {
+  background-color: $red;
+  color: white;
+}
+
+.stripe.darkblue {
+  background-color: $darkblue;
+  color: white;
+}
+
+.stripe.blue {
+  background-color: $blue;
+}
+
+.stripe.lightblue {
+  background-color: $lightblue;
+}
+
+.stripe.gray {
+  background-color: $gray;
+}
+
+.stripe.darkgray {
+  background-color: $darkgray;
+  color: white;
+}
