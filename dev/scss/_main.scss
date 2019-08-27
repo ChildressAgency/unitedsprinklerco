@@ -88,3 +88,25 @@ footer.navigation {
     background-color: $gray;
   }
 }
+
+.stripe {
+  .row {
+    min-height: 400px;
+  }
+
+  .text {
+    p {
+      max-width: 400px;
+    }
+  }
+
+  .image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    img {
+      max-height: 450px;
+    }
+  }
+}
