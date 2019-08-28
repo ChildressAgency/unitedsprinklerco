@@ -8,7 +8,7 @@
     ?>
     <div class="stripe <?php echo $color ?>">
       <div class="<?php echo $image_size == "small" ? "container" : "container-fluid" ?>">
-        <div class="row align-items-stretch">
+        <div class="row align-items-stretch justify-content-center">
           <?php if (get_sub_field("image_position") == "left") include("image.php") ?>
           <?php include("text.php") ?>
           <?php if (get_sub_field("image_position") == "right") include("image.php") ?>

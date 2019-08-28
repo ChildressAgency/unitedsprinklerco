@@ -1,6 +1,9 @@
 html, body {
   margin: 0;
   padding: 0;
+  font-family: open-sans, sans-serif;
+  font-style: normal;
+  font-weight: 300;
 }
 
 a, a:hover, a:visited {
@@ -11,8 +14,9 @@ a, a:hover, a:visited {
 header.contact {
   background-color: $red;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 40px;
+  font-weight: 600;
 
   .quote {
     background-color: $darkblue;
@@ -23,16 +27,21 @@ header.contact {
   }
 
   .phone {
-    font-size: 23px;
+    font-family: eurostile-extended, sans-serif;
+    font-weight: 600;
+    line-height: 38px;
 
     span {
+      font-family: open-sans, sans-serif;
+      font-style: normal;
+      font-weight: 300;
       background-color: white;
       color: $red;
       height: 20px;
-      font-size: 16px;
+      font-size: 14px;
       vertical-align: top;
       border-radius: 5px;
-      padding: 0 3px;
+      padding: 1px 4px;
     }
   }
 }
@@ -50,11 +59,13 @@ header.navigation {
 }
 
 footer.top-footer {
+  font-family: eurostile, sans-serif;
+  font-weight: 600;
   background-color: $blue;
   color: $lightblue;
   font-size: 30px;
-  font-weight: bold;
   text-transform: uppercase;
+  padding-bottom: 3px;
 }
 
 footer.navigation {
@@ -72,6 +83,10 @@ footer.navigation {
     a {
       margin: 4px;
     }
+  }
+
+  .small {
+    font-size: 10px;
   }
 }
 
@@ -95,8 +110,23 @@ footer.navigation {
   }
 
   .text {
-    p {
+    > div {
       max-width: 400px;
+    }
+
+    .heading {
+      font-family: eurostile, sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 32px;
+      color: $darkblue;
+    }
+
+    .body {
+      font-family: open-sans, sans-serif;
+      font-style: normal;
+      font-weight: 300;
     }
   }
 
@@ -119,6 +149,10 @@ footer.navigation {
 .stripe.darkblue {
   background-color: $darkblue;
   color: white;
+
+  .heading {
+    color: $lightblue;
+  }
 }
 
 .stripe.blue {
