@@ -15,4 +15,6 @@
   endwhile;
 endif;
 
+get_template_part("template-parts/testimonials/slider");
+
 get_footer();

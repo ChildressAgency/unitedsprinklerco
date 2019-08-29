@@ -9,9 +9,9 @@
     <div class="stripe <?php echo $color ?>">
       <div class="<?php echo $image_size == "small" ? "container" : "container-fluid" ?>">
         <div class="row align-items-stretch justify-content-center">
-          <?php if (get_sub_field("image_position") == "left") include("image.php") ?>
-          <?php include("text.php") ?>
-          <?php if (get_sub_field("image_position") == "right") include("image.php") ?>
+          <?php if (get_sub_field("image_position") == "left") get_template_part("template-parts/stripes/image") ?>
+          <?php get_template_part("template-parts/stripes/text") ?>
+          <?php if (get_sub_field("image_position") == "right") get_template_part("template-parts/stripes/image") ?>
         </div>
       </div>
     </div>
