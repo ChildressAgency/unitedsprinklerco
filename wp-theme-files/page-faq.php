@@ -6,7 +6,21 @@
 
 <?php get_template_part("template-parts/stripes/stripes") ?>
 
-<?php get_template_part("template-parts/page/content") ?>
+<?php if (have_posts()) : ?>
+  <div id="content">
+    <?php while (have_posts()) : the_post() ?>
+      <div class="container">
+        <article class="row justify-content-center">
+          <section class="col-12 col-md-8 text-center">
+            <?php the_content(); ?>
+            <a href="<?php echo get_permalink(get_page_by_path("contact")) ?>"
+               class="button">Contact Us</a>
+          </section>
+        </article>
+      </div>
+    <?php endwhile; ?>
+  </div>
+<?php endif; ?>
 
 <?php if (have_rows("columns")): ?>
   <div class="footer-columns"
