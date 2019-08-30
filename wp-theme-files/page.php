@@ -6,8 +6,6 @@
 
 <?php get_template_part("template-parts/stripes/stripes") ?>
 
-<?php get_template_part("template-parts/page/content") ?>
-
 <?php if (have_rows("columns")): ?>
   <div class="footer-columns"
        style="background-image: url('<?php echo get_field("background_image")["sizes"]["large"] ?>')">

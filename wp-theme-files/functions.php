@@ -155,6 +155,34 @@ function cai_create_post_types()
       'menu_name' => 'Services',
     )
   ));
+  register_post_type("faq", array(
+    "public" => true,
+    "menu_icon" => "dashicons-editor-help",
+    "labels" => array(
+      "name" => "FAQs",
+      "singular" => "FAQ",
+      'search_items' => 'Search FAQs',
+      'all_items' => 'All FAQs',
+      'edit_item' => 'Edit FAQ',
+      'update_item' => 'Update FAQ',
+      'add_new_item' => 'Add New FAQ',
+      'menu_name' => 'FAQs',
+    )
+  ));
+  register_post_type("job", array(
+    "public" => true,
+    "menu_icon" => "dashicons-id",
+    "labels" => array(
+      "name" => "Jobs",
+      "singular" => "Job",
+      'search_items' => 'Search Jobs',
+      'all_items' => 'All Jobs',
+      'edit_item' => 'Edit Job',
+      'update_item' => 'Update Job',
+      'add_new_item' => 'Add New Job',
+      'menu_name' => 'Employment',
+    )
+  ));
   flush_rewrite_rules();
 }
 
