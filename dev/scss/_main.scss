@@ -255,6 +255,8 @@ a.button {
   padding: 0 30px;
   color: white !important;
   background-color: $red;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 #content {
@@ -295,6 +297,8 @@ a.button {
   border: none;
 
   button, button:hover, button:active, button:focus {
+    color: $darkblue;
+    font-weight: bold;
     width: 100%;
     text-align: left;
     text-decoration: none !important;

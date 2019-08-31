@@ -5,11 +5,6 @@
 <?php get_template_part("template-parts/waves") ?>
 
 <?php
-if (have_posts()) {
-  the_post();
-  $title = get_the_title();
-  $content = get_the_content();
-}
 
 $jobs = new WP_Query(array(
   'post_type' => 'job',
@@ -19,13 +14,13 @@ $jobs = new WP_Query(array(
 ));
 ?>
 
-<?php get_template_part("template-parts/stripes/stripes") ?>
-
   <div id="content">
+    <?php get_template_part("template-parts/page/content") ?>
+
     <div class="container">
-      <article class="row justify-content-center">
+      <div class="row justify-content-center">
         <section class="col-12 col-md-8 text-center">
-          <?php echo $title ?>
+          <h3 class="pt-5 pb-1">Current Jobs</h3>
 
           <?php if ($jobs->have_posts()): ?>
             <div id="accordion" class="mt-3 mb-5 text-left">
@@ -52,7 +47,7 @@ $jobs = new WP_Query(array(
             </div>
           <?php endif; ?>
         </section>
-      </article>
+      </div>
     </div>
   </div>
 
