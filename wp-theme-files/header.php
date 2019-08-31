@@ -28,7 +28,7 @@
       <?php if (get_field("phone", "option")): ?>
         <div class="col-12 col-md-4 phone text-right">
           <span>24/7</span>
-          <?php echo get_field("phone", "option") ?>
+          <a href="tel:<?php echo get_field("phone", "option") ?>"><?php echo get_field("phone", "option") ?></a>
         </div>
       <?php endif ?>
     </div>
