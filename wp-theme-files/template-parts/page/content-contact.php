@@ -8,6 +8,9 @@
             <h3 class="pt-3"><?php the_title() ?></h3>
           <?php endif ?>
           <?php the_content(); ?>
+
+          <a href="<?php echo get_permalink(get_page_by_path("contact")) ?>"
+             class="button">Contact Us</a>
         </section>
         <?php if (has_post_thumbnail()): ?>
           <div class="col-12 col-md-6 text-center order-first order-md-last">

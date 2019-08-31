@@ -5,7 +5,7 @@
 <?php get_template_part("template-parts/waves") ?>
 
   <div id="content" class="single-service wide">
-<?php get_template_part("template-parts/page/content") ?>
+<?php get_template_part("template-parts/page/content", "contact") ?>
 
 <?php
 $currentID = get_the_ID();

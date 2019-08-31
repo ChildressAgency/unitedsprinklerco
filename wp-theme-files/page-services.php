@@ -14,7 +14,7 @@ $services = new WP_Query(array(
 ?>
 
   <div id="content">
-    <?php get_template_part("template-parts/page/content") ?>
+    <?php get_template_part("template-parts/page/content", "contact") ?>
 
     <h3 class="pt-5 pb-4 text-center">Our services</h3>
 

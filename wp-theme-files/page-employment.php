@@ -15,7 +15,7 @@ $jobs = new WP_Query(array(
 ?>
 
   <div id="content">
-    <?php get_template_part("template-parts/page/content") ?>
+    <?php get_template_part("template-parts/page/content", "contact") ?>
 
     <div class="container">
       <div class="row justify-content-center">
