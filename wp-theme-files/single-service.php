@@ -18,7 +18,7 @@ $services = new WP_Query(array(
 ?>
 
 <?php if ($services->have_posts()): ?>
-  <div class="container">
+  <div class="container pb-5">
     <div class="row justify-content-center">
       <div class="col-12 text-center">
         <h3 class="pb-2">More Services</h3>
@@ -43,6 +43,8 @@ $services = new WP_Query(array(
 <?php get_template_part("template-parts/stripes/stripes") ?>
 
 <?php get_template_part("template-parts/page/columns");
+
+get_template_part("template-parts/page/contact");
 
 get_template_part("template-parts/testimonials/slider");
 

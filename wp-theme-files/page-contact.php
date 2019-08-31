@@ -4,7 +4,7 @@
 
 <?php get_template_part("template-parts/waves") ?>
 
-  <div id="content" class="contact-page">
+  <div id="content" class="contact-page pb-5">
     <div class="container">
 
       <div class="row justify-content-center py-4">
@@ -49,6 +49,8 @@
 <?php get_template_part("template-parts/stripes/stripes") ?>
 
 <?php get_template_part("template-parts/page/columns");
+
+get_template_part("template-parts/page/contact");
 
 get_template_part("template-parts/testimonials/slider");
 

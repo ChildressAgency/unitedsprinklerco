@@ -13,7 +13,7 @@ $faqs = new WP_Query(array(
 ));
 ?>
 
-  <div id="content">
+  <div id="content" class="pb-5">
     <div class="container">
       <div class="row justify-content-center">
         <section class="col-12 col-md-8 text-center">
@@ -38,6 +38,8 @@ $faqs = new WP_Query(array(
   </div>
 
 <?php get_template_part("template-parts/page/columns");
+
+get_template_part("template-parts/page/contact");
 
 get_template_part("template-parts/testimonials/slider");
 

@@ -12,6 +12,8 @@
 
 <?php get_template_part("template-parts/page/columns");
 
+get_template_part("template-parts/page/contact");
+
 get_template_part("template-parts/testimonials/slider");
 
 get_footer();

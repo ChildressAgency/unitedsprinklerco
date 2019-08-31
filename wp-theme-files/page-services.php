@@ -13,7 +13,7 @@ $services = new WP_Query(array(
 ));
 ?>
 
-  <div id="content">
+  <div id="content" class="pb-5">
     <?php get_template_part("template-parts/page/content", "contact") ?>
 
     <h3 class="pt-5 pb-4 text-center">Our services</h3>
@@ -39,6 +39,8 @@ $services = new WP_Query(array(
 <?php get_template_part("template-parts/stripes/stripes") ?>
 
 <?php get_template_part("template-parts/page/columns");
+
+get_template_part("template-parts/page/contact");
 
 get_template_part("template-parts/testimonials/slider");
 
