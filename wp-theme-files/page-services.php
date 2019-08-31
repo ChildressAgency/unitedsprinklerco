@@ -23,7 +23,7 @@ $services = new WP_Query(array(
         <div class="row services px-md-5 mx-md-5 justify-content-center">
           <?php while ($services->have_posts()): $services->the_post() ?>
             <a class="col-12 col-md-4 service text-center" href="<?php the_permalink() ?>">
-              <img class="img-fluid" src="<?php echo get_the_post_thumbnail_url() ?>"
+              <img class="img-fluid" src="<?php echo get_field("icon") ?>"
                    alt="<?php echo get_the_title() ?>"/>
               <h4 class="pt-2"><?php the_title() ?></h4>
               <p class="pt-3">

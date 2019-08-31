@@ -293,7 +293,17 @@ a.button {
     font-family: open-sans, sans-serif;
     font-size: 15px;
     font-weight: 100;
-    padding: 35px 0;
+    padding: 25px 0;
+  }
+}
+
+#content.single-service .featured-image {
+  max-height: 400px;
+}
+
+#content.wide {
+  article > * {
+    max-width: none;
   }
 }
 
