@@ -153,7 +153,8 @@ function cai_create_post_types()
       'update_item' => 'Update Service',
       'add_new_item' => 'Add New Service',
       'menu_name' => 'Services',
-    )
+    ),
+    'supports' => array('title', 'editor', 'thumbnail')
   ));
   register_post_type("faq", array(
     "public" => true,
