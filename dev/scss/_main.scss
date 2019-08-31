@@ -307,6 +307,27 @@ a.button {
   }
 }
 
+#content.contact-page {
+  h2 {
+    color: black;
+    font-family: open-sans, sans-serif;
+    max-width: 410px;
+  }
+
+  .row > * {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  div.contact-icon {
+    width: 120px;
+    text-align: center;
+    display: block;
+  }
+}
+
 .card, .card-header {
   background: transparent;
   border-radius: 0;
