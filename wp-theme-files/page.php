@@ -4,6 +4,10 @@
 
 <?php get_template_part("template-parts/waves") ?>
 
+  <div id="content">
+    <?php get_template_part("template-parts/page/content") ?>
+  </div>
+
 <?php get_template_part("template-parts/stripes/stripes") ?>
 
 <?php if (have_rows("columns")): ?>
