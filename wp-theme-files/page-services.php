@@ -16,7 +16,7 @@ $services = new WP_Query(array(
   <div id="content">
     <?php get_template_part("template-parts/page/content") ?>
 
-    <h3 class="pt-5 pb-1 text-center">Our services</h3>
+    <h3 class="pt-5 pb-4 text-center">Our services</h3>
 
     <?php if ($services->have_posts()): ?>
       <div class="container">
@@ -25,8 +25,8 @@ $services = new WP_Query(array(
             <a class="col-12 col-md-4 service text-center" href="<?php the_permalink() ?>">
               <img class="img-fluid" src="<?php echo get_the_post_thumbnail_url() ?>"
                    alt="<?php echo get_the_title() ?>"/>
-              <h4><?php the_title() ?></h4>
-              <p>
+              <h4 class="pt-2"><?php the_title() ?></h4>
+              <p class="pt-3">
                 <?php echo get_field("summary") ?>
               </p>
             </a>
