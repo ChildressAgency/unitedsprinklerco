@@ -141,6 +141,12 @@ footer.navigation {
   }
 }
 
+.front-page-header {
+  .row {
+    min-height: 400px !important;
+  }
+}
+
 .stripe.red {
   background-color: $red;
   color: white;
