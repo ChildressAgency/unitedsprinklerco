@@ -124,11 +124,51 @@ $roof = get_field('roof_carousel');
     </div>
   </div>
 
-<?php get_template_part("template-parts/stripes/stripes") ?>
+  <div class="page-title container-fluid">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1>Community Involvement</h1>
+        <h3>We love supporting our local community</h3>
+      </div>
+    </div>
+  </div>
 
-<?php get_template_part("template-parts/page/columns");
+  <div class="stripe lightgray">
+    <p></p>
+  </div>
+
+<?php
+
+get_template_part("template-parts/stripes/stripes");
+
+get_template_part("template-parts/page/columns");
 
 get_template_part("template-parts/page/contact");
+
+?>
+
+<?php
+the_post();
+if (have_rows("affiliations")):
+  ?>
+  <div class="container affiliations">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1>Professional Affiliations</h1>
+      </div>
+    </div>
+    <div class="row align-items-center py-5">
+      <?php while (have_rows("affiliations")): the_row() ?>
+        <a class="col-6 col-md" href="<?php the_sub_field("url") ?>">
+          <img class="img-fluid" src="<?php echo get_sub_field("image")["sizes"]["large"] ?>"
+               alt="<?php echo get_sub_field("image")["title"] ?>"/>
+        </a>
+      <?php endwhile ?>
+    </div>
+  </div>
+<?php endif ?>
+
+<?php
 
 get_template_part("template-parts/testimonials/slider");
 

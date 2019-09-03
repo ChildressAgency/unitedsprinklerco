@@ -211,13 +211,12 @@ footer.navigation {
 .page-title {
   background-color: $darkblue;
 
-  h1 {
+  h1, h2, h3 {
     color: white;
   }
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: $darkblue;
   font-family: eurostile, sans-serif;
 }
 
@@ -288,23 +287,6 @@ h4 {
   margin-bottom: 15px;
 }
 
-.carousel-indicators {
-  position: static;
-
-  li.button {
-    background: transparent;
-    border: 2px solid transparent;
-    width: initial;
-    height: initial;
-    text-indent: 0;
-  }
-
-  li.button.active {
-    border: 2px solid $red;
-    color: $darkblue !important;
-  }
-}
-
 #content {
   background-color: $gray;
 
@@ -360,6 +342,18 @@ h4 {
   }
 }
 
+.services .service {
+  h4 {
+    color: $darkblue;
+  }
+}
+
+.affiliations {
+  h1 {
+    color: $darkblue;
+  }
+}
+
 #roof {
   background-color: $lightblue;
   background-image: url("img/roof.png");
@@ -379,11 +373,30 @@ h4 {
   }
 }
 
-#roof-carousel .carousel-inner {
-  min-height: 300px;
+#roof-carousel {
+  .carousel-indicators {
+    position: static;
 
-  img {
-    max-height: 200px;
+    li.button {
+      background: transparent;
+      border: 2px solid transparent;
+      width: initial;
+      height: initial;
+      text-indent: 0;
+    }
+
+    li.button.active {
+      border: 2px solid $red;
+      color: $darkblue !important;
+    }
+  }
+
+  .carousel-inner {
+    min-height: 300px;
+
+    img {
+      max-height: 200px;
+    }
   }
 }
 
