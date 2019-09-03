@@ -311,6 +311,32 @@ a.button {
   }
 }
 
+#content .services {
+  .service {
+    h4 {
+      white-space: nowrap;
+    }
+
+    img {
+      height: 100px;
+      width: auto;
+    }
+  }
+}
+
+#content .services.front-page-services {
+  .service {
+    img {
+      height: 80px;
+      width: auto;
+    }
+
+    p {
+      font-size: 13px;
+    }
+  }
+}
+
 #content.contact-page {
   h2 {
     color: black;
