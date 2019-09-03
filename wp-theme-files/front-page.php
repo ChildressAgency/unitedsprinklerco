@@ -39,9 +39,7 @@ $services = new WP_Query(array(
 
 <?php get_template_part("template-parts/waves") ?>
 
-  <div id="content">
-    <?php get_template_part("template-parts/page/content") ?>
-
+  <div id="content" class="pb-5">
     <?php if ($services->have_posts()): ?>
       <div class="container-fluid">
         <div class="row services front-page-services px-md-5 mx-md-5 justify-content-center align-items-start">
@@ -63,6 +61,20 @@ $services = new WP_Query(array(
         </div>
       </div>
     <?php endif; ?>
+  </div>
+
+  <div id="roof">
+    <div class="container">
+      <div class="row justify-content-center">
+        <?php if (have_posts()) : ?>
+          <?php while (have_posts()) : the_post() ?>
+            <div class="col-12 col-md-10 text-center px-5 mx-5">
+              <?php the_content() ?>
+            </div>
+          <?php endwhile; ?>
+        <?php endif; ?>
+      </div>
+    </div>
   </div>
 
 <?php get_template_part("template-parts/stripes/stripes") ?>

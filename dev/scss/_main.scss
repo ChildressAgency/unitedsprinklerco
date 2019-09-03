@@ -210,6 +210,10 @@ footer.navigation {
 
 .page-title {
   background-color: $darkblue;
+
+  h1 {
+    color: white;
+  }
 }
 
 h1 {
@@ -271,6 +275,23 @@ a.button {
   margin-bottom: 15px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: $darkblue;
+  font-family: eurostile, sans-serif;
+}
+
+h1, h2 {
+  font-family: eurostile-extended, sans-serif;
+  font-weight: 600;
+}
+
+h3 {
+  font-weight: 100;
+  font-size: 24px;
+  line-height: 26px;
+}
+
+
 #content {
   background-color: $gray;
 
@@ -280,17 +301,6 @@ a.button {
 
   .featured-image {
     max-height: 300px;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    color: $darkblue;
-    font-family: eurostile, sans-serif;
-  }
-
-  h3 {
-    font-weight: 100;
-    font-size: 24px;
-    line-height: 26px;
   }
 
   p {
@@ -334,6 +344,25 @@ a.button {
     p {
       font-size: 13px;
     }
+  }
+}
+
+#roof {
+  background-color: $lightblue;
+  background-image: url("img/roof.png");
+  background-position: top center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  min-height: 400px;
+  padding-top: 100px;
+  @include media-breakpoint-up(sm) {
+    padding-top: 130px;
+  }
+  @include media-breakpoint-up(md) {
+    padding-top: 250px;
+  }
+  @include media-breakpoint-up(xl) {
+    padding-top: 300px;
   }
 }
 
