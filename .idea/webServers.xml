@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="6f55e532-9367-4129-b025-cb0f6967caba" name="unitedsprinklerco" url="http://dev.childressagency.com/unitedsprinklerco">
+        <fileTransfer host="dev.childressagency.com" port="22" privateKey="C:\Users\ishmayeck\.ssh\id_rsa" rootFolder="/home/devchildressagen/public_html/unitedsprinklerco" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
