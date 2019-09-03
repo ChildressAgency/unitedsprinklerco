@@ -7,6 +7,8 @@ $services = new WP_Query(array(
   'posts_per_page' => -1,
   'order' => 'ASC'
 ));
+$roof = get_field('roof_carousel');
+
 ?>
 
   <div class="stripe page-header front-page-header">
@@ -65,7 +67,7 @@ $services = new WP_Query(array(
 
   <div id="roof">
     <div class="container">
-      <div class="row justify-content-center">
+      <div class="row justify-content-center mb-5">
         <?php if (have_posts()) : ?>
           <?php while (have_posts()) : the_post() ?>
             <div class="col-12 col-md-10 text-center px-5 mx-5">
@@ -73,6 +75,51 @@ $services = new WP_Query(array(
             </div>
           <?php endwhile; ?>
         <?php endif; ?>
+      </div>
+
+      <div class="row mt-5">
+
+        <div id="roof-carousel" class="carousel slide carousel-fade">
+          <?php if ($roof): ?>
+            <ol class="carousel-indicators text-center">
+              <?php foreach ($roof as $i => $post): ?>
+                <li data-target="#roof-carousel" data-slide-to="<?php echo $i ?>"
+                    class="button <?php if ($i === 0) echo "active" ?>">
+                  <?php echo $post["title"] ?>
+                </li>
+              <?php endforeach; ?>
+            </ol>
+            <div class="carousel-inner">
+
+              <?php foreach ($roof as $i => $post): ?>
+                <div class="carousel-item <?php if ($i === 0) echo "active" ?> container">
+                  <div class="row justify-content-center">
+                    <div class="col-9 col-md-7">
+                      <?php echo $post["text"] ?>
+                    </div>
+                    <?php if ($post["image"]): ?>
+                      <div class="col-3">
+                        <img class="img-fluid" src="<?php echo $post["image"]["sizes"]["large"] ?>"
+                             alt="<?php echo $post["title"] ?>"/>
+                      </div>
+                    <?php endif ?>
+                  </div>
+                  <div class="row">
+                    <?php if ($post["button_link"]): ?>
+                      <div class="col text-center">
+                        <a class="button"
+                           href="<?php echo $post["button_link"] ?>"><?php echo $post["button_text"] ?></a>
+                      </div>
+                    <?php endif ?>
+                  </div>
+                </div>
+              <?php
+              endforeach; ?>
+
+            </div>
+          <?php endif; ?>
+        </div>
+
       </div>
     </div>
   </div>
