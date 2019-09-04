@@ -400,6 +400,30 @@ h4 {
   }
 }
 
+#community-carousel {
+  .carousel-inner {
+    .circle {
+      height: 0;
+      padding-bottom: 100%;
+      background-color: $gray;
+      border: 2px solid $darkblue;
+      border-radius: 50%;
+      position: relative;
+      font-size: 13px;
+      overflow: hidden;
+
+      .text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 40px 20px;
+      }
+    }
+  }
+}
+
 #content.contact-page {
   h2 {
     color: black;

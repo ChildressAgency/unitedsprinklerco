@@ -8,6 +8,7 @@ $services = new WP_Query(array(
   'order' => 'ASC'
 ));
 $roof = get_field('roof_carousel');
+$community = get_field('community_carousel');
 
 ?>
 
@@ -124,6 +125,7 @@ $roof = get_field('roof_carousel');
     </div>
   </div>
 
+<?php if ($community): ?>
   <div class="page-title container-fluid">
     <div class="row">
       <div class="col-12 text-center">
@@ -132,10 +134,37 @@ $roof = get_field('roof_carousel');
       </div>
     </div>
   </div>
+  <div class="stripe gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mt-5">
 
-  <div class="stripe lightgray">
-    <p></p>
+          <div id="community-carousel" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+
+              <?php foreach ($community as $i => $post): ?>
+                <div class="carousel-item <?php if ($i === 0) echo "active" ?> container">
+                  <div class="row justify-content-center">
+                    <div class="col-8 col-md-4 text-center">
+                      <div class="circle">
+                        <div class="text d-flex flex-column justify-content-center align-items-center">
+                          <h4><?php echo $post["title"] ?></h4>
+                          <?php echo $post["text"] ?>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <?php endforeach; ?>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
   </div>
+<?php endif ?>
 
 <?php
 
