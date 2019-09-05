@@ -5,10 +5,10 @@
 <?php get_template_part("template-parts/waves") ?>
 
   <div id="content" class="contact-page pb-5">
-    <div class="container">
+    <div class="container text-center text-md-left">
 
       <div class="row justify-content-center py-4">
-        <div class="col-10 col-md-6">
+        <div class="col-10 col-md-6 contact-item">
           <div class="contact-icon">
             <img src="<?php echo get_template_directory_uri() ?>/img/contact_phone.png" alt="Call Us"/>
           </div>
@@ -20,7 +20,7 @@
       </div>
 
       <div class="row justify-content-center py-4">
-        <div class="col-10 col-md-6">
+        <div class="col-10 col-md-6 contact-item">
           <div class="contact-icon">
             <img src="<?php echo get_template_directory_uri() ?>/img/contact_address.png" alt="Find Us"/>
           </div>
@@ -32,8 +32,8 @@
       </div>
 
       <div class="row justify-content-center py-4">
-        <div class="col-10 col-md-6">
-          <div class="contact-icon">
+        <div class="col-10 col-md-6 contact-item">
+          <div class="contact-icon w-100">
             <img src="<?php echo get_template_directory_uri() ?>/img/contact_email.png" alt="Email Us"/>
           </div>
           <div>

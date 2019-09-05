@@ -234,6 +234,7 @@ h1 {
 
 h2 {
   font-weight: 600;
+  color: $darkblue;
 }
 
 h3 {
@@ -241,12 +242,14 @@ h3 {
   font-weight: 100;
   font-size: 24px;
   line-height: 26px;
+  color: $darkblue;
 }
 
 h4 {
   font-family: open-sans, sans-serif;
   font-weight: 600;
   font-size: 18px;
+  color: $darkblue;
 }
 
 .footer-columns {
@@ -268,6 +271,10 @@ h4 {
 
   .row > * {
     padding: 30px;
+  }
+
+  h3 {
+    color: white;
   }
 }
 
@@ -401,7 +408,22 @@ h4 {
 }
 
 #community-carousel {
+  .carousel-item {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: none !important;
+
+    > .row {
+      background-color: rgba(255, 255, 255, 0.75);
+    }
+  }
+
   .carousel-inner {
+    @include media-breakpoint-down(md) {
+      padding-bottom: 48px;
+    }
+
     .circle {
       height: 0;
       padding-bottom: 100%;
@@ -456,11 +478,6 @@ h4 {
     border: 2px solid $red;
     color: $darkblue;
     position: relative;
-    top: -50px;
-
-    @include media-breakpoint-up(md) {
-      top: -15px;
-    }
   }
 
   .carousel-control-next {
@@ -504,6 +521,16 @@ h4 {
     width: 120px;
     text-align: center;
     display: block;
+  }
+
+  @include media-breakpoint-down(md) {
+    .contact-item {
+      flex-flow: column;
+    }
+
+    h2 {
+      font-size: 22px;
+    }
   }
 }
 

@@ -128,69 +128,62 @@ $community = get_field('community_carousel');
 <?php if ($community): ?>
   <div class="page-title container-fluid">
     <div class="row">
-      <div class="col-12 text-center">
+      <div class="col-12 text-center pb-4">
         <h1>Community Involvement</h1>
         <h3>We love supporting our local community</h3>
       </div>
     </div>
   </div>
-  <div class="stripe gray">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 mt-5">
+  <div class="stripe gray" style="<?php echo "" ?>">
 
-          <div id="community-carousel" class="carousel slide carousel-fade">
-            <div class="carousel-inner">
-
-              <?php foreach ($community as $i => $post): ?>
-                <?php
-                $last = count($community) - 1;
-                if ($i == 0) {
-                  $next = $community[$i + 1];
-                  $prev = $community[$last];
-                } else if ($i == $last) {
-                  $next = $community[0];
-                  $prev = $community[$i - 1];
-                } else {
-                  $next = $community[$i + 1];
-                  $prev = $community[$i - 1];
-                }
-                ?>
-                <div class="carousel-item <?php if ($i === 0) echo "active" ?> container mb-n5 mb-md-0">
-                  <div class="row justify-content-center">
-                    <div class="col-12 col-md-4 text-center">
-                      <div class="circle">
-                        <div class="text d-flex flex-column justify-content-center align-items-center">
-                          <h4><?php echo $post["title"] ?></h4>
-                          <?php echo $post["text"] ?>
-                        </div>
-                      </div>
-                    </div>
-
-                    <a class="carousel-control-prev flex-column" href="#community-carousel" data-slide="prev">
-                      <span class="carousel-control-prev-icon"></span>
-                      <div class="description d-none d-md-block">
-                        <?php echo $prev["title"] ?>
-                      </div>
-                    </a>
-
-                    <a class="carousel-control-next flex-column" href="#community-carousel" data-slide="next">
-                      <span class="carousel-control-next-icon"></span>
-                      <div class="description d-none d-md-block">
-                        <?php echo $next["title"] ?>
-                      </div>
-                    </a>
-
+    <div id="community-carousel" class="carousel slide carousel-fade">
+      <div class="carousel-inner">
+        <?php foreach ($community as $i => $post): ?>
+          <?php
+          $last = count($community) - 1;
+          if ($i == 0) {
+            $next = $community[$i + 1];
+            $prev = $community[$last];
+          } else if ($i == $last) {
+            $next = $community[0];
+            $prev = $community[$i - 1];
+          } else {
+            $next = $community[$i + 1];
+            $prev = $community[$i - 1];
+          }
+          ?>
+          <div class="carousel-item <?php if ($i === 0) echo "active" ?> container mb-n5 mb-md-0"
+               style="background-image: url('<?php echo $post["background"] ?>')">
+            <div class="row justify-content-center py-5">
+              <div class="col-12 col-md-4 text-center">
+                <div class="circle">
+                  <div class="text d-flex flex-column justify-content-center align-items-center">
+                    <h4><?php echo $post["title"] ?></h4>
+                    <?php echo $post["text"] ?>
                   </div>
                 </div>
-              <?php endforeach; ?>
+              </div>
+
+              <a class="carousel-control-prev flex-column" href="#community-carousel" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <div class="description d-none d-md-block">
+                  <?php echo $prev["title"] ?>
+                </div>
+              </a>
+
+              <a class="carousel-control-next flex-column" href="#community-carousel" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <div class="description d-none d-md-block">
+                  <?php echo $next["title"] ?>
+                </div>
+              </a>
 
             </div>
           </div>
-
-        </div>
+        <?php endforeach; ?>
       </div>
     </div>
+
   </div>
 <?php endif ?>
 
