@@ -13,6 +13,7 @@
         <serverdata>
           <mappings>
             <mapping deploy="/wp-content/themes/unitedsprinklerco" local="$PROJECT_DIR$/wp-theme-files" web="/" />
+            <mapping deploy="/wp-content" local="$PROJECT_DIR$/../../wp/sites/unitedsprinklerco/wp-content" web="/" />
           </mappings>
         </serverdata>
       </paths>

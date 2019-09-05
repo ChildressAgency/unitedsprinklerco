@@ -22,7 +22,7 @@
       <?php endif ?>
 
       <div class="col-12 col-md-4 text-center">
-        <a class="quote" href="#">Request a quote</a>
+        <a class="quote" href="<?php echo get_permalink(get_page_by_path("contact")) ?>">Request a quote</a>
       </div>
 
       <?php if (get_field("phone", "option")): ?>
