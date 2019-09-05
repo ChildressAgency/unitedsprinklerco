@@ -1,4 +1,4 @@
-<div class="stripe darkblue">
+<div class="stripe darkblue contact-stripe">
   <div class="container">
     <div class="row justify-content-center align-items-center">
       <div class="col-12 col-md-4 text-center contact-form">

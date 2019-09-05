@@ -676,3 +676,26 @@ h4 {
     font-size: 12px;
   }
 }
+
+.contact-stripe-map {
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .pipe {
+    padding-left: 48px;
+    height: 400px;
+    background-image: url("img/form-pipe.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom left;
+    position: relative;
+
+    input[type=submit] {
+      position: absolute;
+      bottom: 50px;
+      left: 50px;
+    }
+  }
+}
