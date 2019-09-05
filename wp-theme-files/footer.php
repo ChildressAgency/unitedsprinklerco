@@ -7,7 +7,7 @@
     <div class="row">
 
       <div class="col-12 col-md-6">
-        <a href="<?php get_site_url() ?>">
+        <a href="<?php echo get_site_url() ?>">
           <img src="<?php echo get_template_directory_uri() ?>/img/logo-white.png" alt="Logo" class="img-fluid"/>
         </a>
       </div>
