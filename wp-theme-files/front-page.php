@@ -80,9 +80,9 @@ $community = get_field('community_carousel');
 
       <div class="row mt-5">
 
-        <div id="roof-carousel" class="carousel slide carousel-fade">
+        <div id="roof-carousel" class="carousel slide carousel-fade col">
           <?php if ($roof): ?>
-            <ol class="carousel-indicators text-center">
+            <ol class="carousel-indicators text-center flex-wrap">
               <?php foreach ($roof as $i => $post): ?>
                 <li data-target="#roof-carousel" data-slide-to="<?php echo $i ?>"
                     class="button <?php if ($i === 0) echo "active" ?>">
@@ -90,16 +90,16 @@ $community = get_field('community_carousel');
                 </li>
               <?php endforeach; ?>
             </ol>
-            <div class="carousel-inner">
+            <div class="carousel-inner pb-3">
 
               <?php foreach ($roof as $i => $post): ?>
                 <div class="carousel-item <?php if ($i === 0) echo "active" ?> container">
                   <div class="row justify-content-center">
-                    <div class="col-9 col-md-7">
+                    <div class="col-12 col-md-7">
                       <?php echo $post["text"] ?>
                     </div>
                     <?php if ($post["image"]): ?>
-                      <div class="col-3">
+                      <div class="col-12 col-md-3 text-center">
                         <img class="img-fluid" src="<?php echo $post["image"]["sizes"]["large"] ?>"
                              alt="<?php echo $post["title"] ?>"/>
                       </div>
@@ -108,7 +108,7 @@ $community = get_field('community_carousel');
                   <div class="row">
                     <?php if ($post["button_link"]): ?>
                       <div class="col text-center">
-                        <a class="button"
+                        <a class="button mb-0"
                            href="<?php echo $post["button_link"] ?>"><?php echo $post["button_text"] ?></a>
                       </div>
                     <?php endif ?>
@@ -143,9 +143,22 @@ $community = get_field('community_carousel');
             <div class="carousel-inner">
 
               <?php foreach ($community as $i => $post): ?>
-                <div class="carousel-item <?php if ($i === 0) echo "active" ?> container">
+                <?php
+                $last = count($community) - 1;
+                if ($i == 0) {
+                  $next = $community[$i + 1];
+                  $prev = $community[$last];
+                } else if ($i == $last) {
+                  $next = $community[0];
+                  $prev = $community[$i - 1];
+                } else {
+                  $next = $community[$i + 1];
+                  $prev = $community[$i - 1];
+                }
+                ?>
+                <div class="carousel-item <?php if ($i === 0) echo "active" ?> container mb-n5 mb-md-0">
                   <div class="row justify-content-center">
-                    <div class="col-8 col-md-4 text-center">
+                    <div class="col-12 col-md-4 text-center">
                       <div class="circle">
                         <div class="text d-flex flex-column justify-content-center align-items-center">
                           <h4><?php echo $post["title"] ?></h4>
@@ -153,6 +166,21 @@ $community = get_field('community_carousel');
                         </div>
                       </div>
                     </div>
+
+                    <a class="carousel-control-prev flex-column" href="#community-carousel" data-slide="prev">
+                      <span class="carousel-control-prev-icon"></span>
+                      <div class="description d-none d-md-block">
+                        <?php echo $prev["title"] ?>
+                      </div>
+                    </a>
+
+                    <a class="carousel-control-next flex-column" href="#community-carousel" data-slide="next">
+                      <span class="carousel-control-next-icon"></span>
+                      <div class="description d-none d-md-block">
+                        <?php echo $next["title"] ?>
+                      </div>
+                    </a>
+
                   </div>
                 </div>
               <?php endforeach; ?>
@@ -186,7 +214,7 @@ if (have_rows("affiliations")):
         <h1>Professional Affiliations</h1>
       </div>
     </div>
-    <div class="row align-items-center py-5">
+    <div class="row align-items-center py-5 text-center">
       <?php while (have_rows("affiliations")): the_row() ?>
         <a class="col-6 col-md" href="<?php the_sub_field("url") ?>">
           <img class="img-fluid" src="<?php echo get_sub_field("image")["sizes"]["large"] ?>"

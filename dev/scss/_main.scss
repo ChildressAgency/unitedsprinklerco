@@ -409,8 +409,11 @@ h4 {
       border: 2px solid $darkblue;
       border-radius: 50%;
       position: relative;
-      font-size: 13px;
       overflow: hidden;
+      font-size: 11px;
+      @include media-breakpoint-up(md) {
+        font-size: 13px;
+      }
 
       .text {
         position: absolute;
@@ -419,7 +422,66 @@ h4 {
         right: 0;
         bottom: 0;
         padding: 40px 20px;
+
+        h4 {
+          padding: 0 20px;
+        }
       }
+    }
+  }
+
+  .carousel-control-next, .carousel-control-prev {
+    opacity: 1 !important;
+
+    .description {
+      font-weight: bold;
+      font-size: 11px;
+      max-width: 100px;
+      height: 30px;
+      overflow: visible;
+    }
+  }
+
+  .carousel-control-next span, .carousel-control-prev span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    line-height: 26px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 50%;
+    background-image: none;
+    background-color: $gray;
+    border: 2px solid $red;
+    color: $darkblue;
+    position: relative;
+    top: -50px;
+
+    @include media-breakpoint-up(md) {
+      top: -15px;
+    }
+  }
+
+  .carousel-control-next {
+
+    @include media-breakpoint-up(md) {
+      right: 200px;
+    }
+
+    span:before {
+      content: ">";
+    }
+  }
+
+  .carousel-control-prev {
+
+    @include media-breakpoint-up(md) {
+      left: 200px;
+    }
+
+    span:before {
+      content: "<";
     }
   }
 }
