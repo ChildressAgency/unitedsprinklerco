@@ -50,7 +50,7 @@
 
 <?php get_template_part("template-parts/page/columns");
 
-get_template_part("template-parts/page/contact");
+get_template_part("template-parts/page/contact", "map");
 
 get_template_part("template-parts/testimonials/slider");
 
