@@ -2,8 +2,12 @@
   <div class="container-fluid no-gutters">
     <div class="row justify-content-center align-items-stretch">
       <div class="col-12 col-md-6 px-0">
+        <?php
+        $addr = get_field("address", "options");
+        $q = str_replace(" ", "+", $addr);
+        ?>
         <iframe
-            src="https://maps.google.com/maps?q=80+Potomac+Creek+Dr,+Fredericksburg,+VA+22405&output=embed"
+            src="https://maps.google.com/maps?q=<?php echo $q ?>&output=embed"
             style="border:0;"></iframe>
       </div>
       <div class="col-12 col-md-6 text-center contact-form">
