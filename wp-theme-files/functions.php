@@ -187,5 +187,23 @@ function cai_create_post_types()
   flush_rewrite_rules();
 }
 
+add_action('widgets_init', 'cai_widgets_init');
+function cai_widgets_init()
+{
+
+  register_sidebar(
+    array(
+      'name' => 'Contact Form',
+      'id' => 'sidebar-1',
+      'description' => 'Space for the contact form.',
+      'before_widget' => '<section id="%1$s" class="widget %2$s">',
+      'after_widget' => '</section>',
+      'before_title' => '<h2 class="widget-title">',
+      'after_title' => '</h2>',
+    )
+  );
+
+}
+
 require_once dirname(__FILE__) . '/includes/class-wp-bootstrap-navwalker.php';
 require_once dirname(__FILE__) . '/includes/custom-fields.php';
