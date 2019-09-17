@@ -29,6 +29,9 @@
     "gulp-uglify": "^3.0.2"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.10.2"
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@fortawesome/fontawesome-free": "^5.10.2",
+    "gulp-babel": "^8.0.0"
   }
 }
