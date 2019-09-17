@@ -38,7 +38,7 @@ gulp.task('js', function () {
         comments: '/^!/'
       }
     }))
-    .pipe(sourcemaps.write('../../dev/maps', {includeContent: false, sourceRoot: 'wp-theme-files'}))
+    .pipe(sourcemaps.write('../../dev/maps', {includeContent: true, sourceRoot: 'wp-theme-files'}))
     .pipe(gulp.dest('wp-theme-files/js'))
 });
 

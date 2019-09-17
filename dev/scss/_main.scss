@@ -90,20 +90,6 @@ footer.navigation {
   }
 }
 
-.waves {
-  > div {
-    min-height: 60px;
-  }
-
-  .blue {
-    background-color: $darkblue;
-  }
-
-  .gray {
-    background-color: $gray;
-  }
-}
-
 .stripe {
   .row {
     min-height: 400px;
@@ -697,5 +683,19 @@ h4 {
       bottom: 50px;
       left: 50px;
     }
+  }
+}
+
+.waves {
+  width: 100%;
+  height: 120px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  canvas {
+    background-color: $gray;
   }
 }
