@@ -4,7 +4,7 @@
     const ctx = canvas.getContext('2d');
     const PI2 = Math.PI * 2;
 
-    const w = window.innerWidth;
+    let w = window.innerWidth;
     const h = 120;
 
     canvas.width = w;
@@ -42,7 +42,7 @@
 
     const springs = [];
     const numSprings = 200;
-    const springSpacing = w / (numSprings - 1);
+    let springSpacing = w / (numSprings - 1);
     const springHeight = h * 0.5;
     const springConstant = 0.025;
     const springDamp = 0.9;
@@ -132,6 +132,19 @@
 
     document.body.addEventListener('mousemove', onPointerMove);
     document.body.addEventListener('touchmove', onPointerMove);
+
+    window.addEventListener('resize', () => {
+      w = window.innerWidth;
+      canvas.width = w;
+      springSpacing = w / (numSprings - 1);
+
+      let springX = 0;
+      for (let index = 1; index < springs.length; index++) {
+        const currentSpring = springs[index];
+        currentSpring.x = springX;
+        springX += springSpacing;
+      }
+    });
 
     return this;
   };
