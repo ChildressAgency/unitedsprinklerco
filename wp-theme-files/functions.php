@@ -1,5 +1,5 @@
 <?php
-add_action('wp_footer', 'show_template');
+//add_action('wp_footer', 'show_template');
 function show_template()
 {
   global $template;
