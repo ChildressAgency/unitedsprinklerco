@@ -694,6 +694,7 @@ h4 {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  overflow: hidden;
 
   canvas {
     background-color: $gray;
