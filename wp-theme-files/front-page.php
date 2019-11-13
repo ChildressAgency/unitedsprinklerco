@@ -1,6 +1,5 @@
 <?php
 get_header();
-
 $services = new WP_Query(array(
   'post_type' => 'service',
   'post_status' => 'publish',
@@ -10,31 +9,21 @@ $services = new WP_Query(array(
 $roof = get_field('roof_carousel');
 $community = get_field('community_carousel');
 $image = get_field('hero_image');
-
 ?>
-
   <div class="stripe page-header front-page-header">
-    <div class="container-fluid">
-        <!-- Carousel Slider -->
-      <div class="row image carousel slide" 
-             id="carouselExampleIndicators"
-             data-ride="carousel">
+    <div class="">
+      <div class=" image carousel slide" id="carouselExampleIndicators" data-ride="carousel">
             <ol class="carousel-indicators">
-                <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="0"
-                class="active"
-                ></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                       <!--first slide-->
-                       <div class="carousel-item active d-block w-100" style="background-image: url(<?php the_field('background_image');  ?>)" alt="First slide" />
+                    <div class="carousel-item active" style="background-image:url(<?php echo $image['url']; ?>);" >
+                        <div class="row">
                             <div class="col-6 col-md-6 image">
                                 <div class="align-items-center justify-content-end flex-row d-flex">
-                                  <div class="text backdrop">
+                                    <div class="text backdrop">
                                           <p class="text-left heading">
                                               <?php echo get_field("header_title") ?>
                                           </p>
@@ -42,46 +31,50 @@ $image = get_field('hero_image');
                                               <?php echo get_field("header_text") ?>
                                           </p>
                                           <a class="button" href="<?php echo get_permalink(get_page_by_path("contact")) ?>">Request a Quote</a>
-                                      </div>
-                                 </div>
-                              </div>
-                         </div> 
-                         <!--end of first slide-->  
-                     </div>
-                     <div class="carousel-item d-block w-100" style="background-image: url(<?php the_field('background_image');  ?>)" alt="Second slide" />
-                        <div class="col-12 col-md-6 image">
-                             <div class=" align-items-center justify-content-end flex-row d-flex">
-                               <div class="text backdrop">
-                                    <p class="text-left heading">
-                                        <?php echo get_field("header_title") ?>
-                                    </p>
-                                    <p class="text-left body">
-                                        <?php echo get_field("header_text") ?>
-                                    </p>
-                                    <a class="button" href="<?php echo get_permalink(get_page_by_path("contact")) ?>">Request a Quote</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                      </div>  
-
-
-                        <div class="carousel-item w-100"       style="background-image:url(<?php echo $image['url']; ?>)" >                    
-                        <div class="col-12 col-md-6 image">
-                             <div class="align-items-center justify-content-end flex-row d-flex">
-                               <div class="text backdrop">
-                                    <p class="text-left heading">
+                    </div>  
+                     
+                     <div class="carousel-item"  style="background-image:url(<?php echo $image['url']; ?>);" > 
+                        <div class="row">
+                            <div class="col-12 col-md-6 image">
+                                <div class=" align-items-center justify-content-end flex-row d-flex">
+                                    <div class="text backdrop">
+                                        <p class="text-left heading">
                                         <?php echo get_field("header_title") ?>
-                                    </p>
-                                    <p class="text-left body">
+                                        </p>
+                                        <p class="text-left body">
                                         <?php echo get_field("header_text") ?>
-                                    </p>
-                                    <a class="button" href="<?php echo get_permalink(get_page_by_path("contact")) ?>">Request a Quote</a>
+                                        </p>
+                                        <a class="button" href="<?php echo get_permalink(get_page_by_path("contact")) ?>">Request a Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                      </div>
+
+
+                        <div class="carousel-item" style="background-image:url(<?php echo $image['url']; ?>);">                    
+                            <div class="row">
+                                <div class="col-12 col-md-6 image">
+                                    <div class="align-items-center justify-content-end flex-row d-flex">
+                                        <div class="text backdrop">
+                                              <p class="text-left heading">
+                                                  <?php echo get_field("header_title") ?>
+                                              </p>
+                                              <p class="text-left body">
+                                                 <?php echo get_field("header_text") ?>
+                                              </p>
+                                                <a class="button" href="<?php echo get_permalink(get_page_by_path("contact")) ?>">Request a Quote</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     
-                </div>
+                    </div><!--closing of carousel-inner-->
                    
                 <a
                     class="carousel-control-prev"
@@ -100,9 +93,10 @@ $image = get_field('hero_image');
                     <span class="sr-only">Next</span>
                 </a>
         <!--End of Slider -->
-          </div>
-      </div>
-  </div>
+             </div>
+        </div>
+    </div>
+
 
   <div class="page-title container-fluid">
     <div class="row">
