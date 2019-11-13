@@ -9,6 +9,7 @@ $services = new WP_Query(array(
 ));
 $roof = get_field('roof_carousel');
 $community = get_field('community_carousel');
+$image = get_field('hero_image');
 
 ?>
 
@@ -29,23 +30,25 @@ $community = get_field('community_carousel');
             </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                     <img class="d-block w-100" src="" alt="First slide" />
-                            <div class="col-12 col-md-6 image">
+                       <!--first slide-->
+                       <div class="carousel-item active d-block w-100" style="background-image: url(<?php the_field('background_image');  ?>)" alt="First slide" />
+                            <div class="col-6 col-md-6 image">
                                 <div class="align-items-center justify-content-end flex-row d-flex">
-                                <div class="text backdrop">
-                                        <p class="text-left heading">
-                                            <?php echo get_field("header_title") ?>
-                                        </p>
-                                        <p class="text-left body">
-                                            <?php echo get_field("header_text") ?>
-                                        </p>
-                                        <a class="button" href="<?php echo get_permalink(get_page_by_path("contact")) ?>">Request a Quote</a>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-                    <div class="carousel-item">
-                    <img class="d-block w-100" src="..." alt="Second slide" />
+                                  <div class="text backdrop">
+                                          <p class="text-left heading">
+                                              <?php echo get_field("header_title") ?>
+                                          </p>
+                                          <p class="text-left body">
+                                              <?php echo get_field("header_text") ?>
+                                          </p>
+                                          <a class="button" href="<?php echo get_permalink(get_page_by_path("contact")) ?>">Request a Quote</a>
+                                      </div>
+                                 </div>
+                              </div>
+                         </div> 
+                         <!--end of first slide-->  
+                     </div>
+                     <div class="carousel-item d-block w-100" style="background-image: url(<?php the_field('background_image');  ?>)" alt="Second slide" />
                         <div class="col-12 col-md-6 image">
                              <div class=" align-items-center justify-content-end flex-row d-flex">
                                <div class="text backdrop">
@@ -59,9 +62,10 @@ $community = get_field('community_carousel');
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                    <img class="d-block w-100" src="..." alt="Third slide" />
+                      </div>  
+
+
+                        <div class="carousel-item w-100"       style="background-image:url(<?php echo $image['url']; ?>)" >                    
                         <div class="col-12 col-md-6 image">
                              <div class="align-items-center justify-content-end flex-row d-flex">
                                <div class="text backdrop">
@@ -76,7 +80,9 @@ $community = get_field('community_carousel');
                             </div>
                         </div>
                     </div>
+                    
                 </div>
+                   
                 <a
                     class="carousel-control-prev"
                     href="#carouselExampleIndicators"
