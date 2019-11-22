@@ -2,12 +2,16 @@
 
 <p>Fill out the form below and select what you would like to discuss and we will get back to you as soon as we can.</p>
 
-[text* your-name placeholder "Name*"]
+[text* your-name class:form-control placeholder "Name*"]
 
-[email* your-email placeholder "Email*"]
+[email* your-email class:form-control placeholder "Email*"]
 
-[select* subject first_as_label "Select a Subject" "Installation" "Inspection" "Employment" "Accounting"]
+[select* subject class:form-control first_as_label "Select a Subject" "Installation" "Inspection" "Employment" "Accounting"]
 
-[textarea* notes placeholder "Your Message"]
+[textarea* notes class:form-control placeholder "Your Message"]
 
-[submit "Submit"]
+<div class="valve text-left">
+  <span class="valve-casing"></span>
+  <span class="valve-handle"></span>
+  [submit "Submit"]
+</div>
