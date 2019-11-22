@@ -74,3 +74,16 @@ wp-content/plugins/hello.php
 wp-content/themes/twenty*/
 *.sql
 *.sqlite
+
+# Custom
+PSDs/
+customer_notes/
+Archive/
+*.txt
+*.docx
+*.pdf
+*.zip
+.vscode/
+node_modules/
+**/vendors/*
+package-lock.json
