@@ -11,7 +11,7 @@
             style="border:0;"></iframe>
       </div>
       <div class="col-12 col-md-6 text-center contact-form">
-        <div class="pipe pt-3 mx-md-5">
+        <div class="pipe pt-3">
           <?php
           $code = '[contact-form-7 id="' . get_field("contact_form", "options") . '"]';
           echo do_shortcode($code);
