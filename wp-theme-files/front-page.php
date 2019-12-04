@@ -22,8 +22,8 @@ $image = get_field('hero_image');
                     <div class="carousel-item active" style="background-image:url(<?php echo $image['url']; ?>);" >
                         <div class="row">
                             <div class="col-6 col-md-6 image">
-                                <div class="align-items-center justify-content-end flex-row d-flex">
-                                    <div class="text backdrop">
+                                <div class=" col-12 col-md-12 align-items-center justify-content-end flex-row d-flex h-100 ">
+                                    <div class="text backdrop pt-5">
                                           <p class="text-left heading">
                                               <?php echo get_field("header_title") ?>
                                           </p>
@@ -40,8 +40,8 @@ $image = get_field('hero_image');
                      <div class="carousel-item"  style="background-image:url(<?php echo $image['url']; ?>);" > 
                         <div class="row">
                             <div class="col-12 col-md-6 image">
-                                <div class=" align-items-center justify-content-end flex-row d-flex">
-                                    <div class="text backdrop">
+                                <div class=" align-items-center justify-content-end flex-row d-flex  h-100">
+                                    <div class="text backdrop pt-5">
                                         <p class="text-left heading">
                                         <?php echo get_field("header_title") ?>
                                         </p>
@@ -59,8 +59,8 @@ $image = get_field('hero_image');
                         <div class="carousel-item" style="background-image:url(<?php echo $image['url']; ?>);">                    
                             <div class="row">
                                 <div class="col-12 col-md-6 image">
-                                    <div class="align-items-center justify-content-end flex-row d-flex">
-                                        <div class="text backdrop">
+                                    <div class="align-items-center justify-content-end flex-row d-flex  h-100 ">
+                                        <div class="text backdrop pt-5">
                                               <p class="text-left heading">
                                                   <?php echo get_field("header_title") ?>
                                               </p>
@@ -76,7 +76,7 @@ $image = get_field('hero_image');
                     
                     </div><!--closing of carousel-inner-->
                    
-                <a
+             <!--   <a
                     class="carousel-control-prev"
                     href="#carouselExampleIndicators"
                     role="button"
@@ -91,7 +91,7 @@ $image = get_field('hero_image');
                     data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
-                </a>
+                </a>-->
         <!--End of Slider -->
              </div>
         </div>
